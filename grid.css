@@ -1,0 +1,29 @@
+body{
+    color: rgb(6, 3, 27);
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+
+ #content{ /*acts as grid wrapper */
+    display: grid; /*tells it to be a grid*/
+    /* grid-template-columns:33.3% 33.3% 33.3%; */
+    /*grid-template-columns:30% 20% 50%;*/ /* You can give the columns different widths */
+    /*grid-template-columns:1fr 2fr 1fr;*/ /* You can create fractions instea of using the number */
+    grid-template-columns: repeat(6,1fr );  /* same as saying 1fr 1fr 1 fr, like how many times we want it to repeat. we want to repeat something x amount if times and say what we want to background-repeat */
+    max-width: 950px;
+    margin: 0 auto;
+    grid-gap: 10px;
+    grid-template-rows: repeat(4, mimnmax(150px, auto));
+   
+
+}
+
+#content div{
+    background: #3bbced;
+    padding: 30px;
+}
+
+#content div:nth-child(even){ /*gave it that odd color*/
+    background: rgb(249, 28, 28);
+}
+ 
